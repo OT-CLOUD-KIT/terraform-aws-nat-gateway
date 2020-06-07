@@ -1,3 +1,1 @@
-# NAT-gateway
-
-This repository consists of Terraform module for AWS NAT Gateway
+## You need to pass subnet id to this module
