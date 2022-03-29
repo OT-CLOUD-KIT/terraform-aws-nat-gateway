@@ -2,7 +2,7 @@ variable "subnets_for_nat_gw" {
   type = list(string)
 }
 
-variable "vpc_name" {
+variable "nat_name" {
   description = "Name of VPC in which NAT will be created"
   type        = string
 }

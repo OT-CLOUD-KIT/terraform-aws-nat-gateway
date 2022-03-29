@@ -7,7 +7,7 @@ resource "aws_nat_gateway" "nat-gw" {
   subnet_id     = element(var.subnets_for_nat_gw,1)
   tags = merge(
     {
-      Name = format("%s-nat", var.vpc_name)
+      Name = format("%s", var.nat_name)
     },
     var.tags,
   )
