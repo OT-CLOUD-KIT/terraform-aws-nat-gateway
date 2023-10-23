@@ -1,9 +1,14 @@
 output "ngw_id" {
   description = "The id of the NGW attached to VPC"
-  value       = aws_nat_gateway.nat-gw.id
+  value       = aws_nat_gateway.nat-gw[0].id
+}
+
+output "ngw_id1" {
+  description = "The id of the NGW attached to VPC"
+  value       = aws_nat_gateway.nat-gw[1].id
 }
 
 output "nat_ip" {
   description = "The public ip for the NGW attached to VPC"
-  value       = aws_eip.nat_ip.public_ip
+  value       = aws_eip.nat_ip.*.public_ip
 }
